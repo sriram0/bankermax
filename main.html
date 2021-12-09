@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BankerMax</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--Firebase Links-->
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <style>
+            .round{
+                border-radius: 10px;
+                margin: 80px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body class="bg-warning text-info">
+        <button class="btn btn-danger" style="margin: 20px;" onclick="logout()">Logout</button>
+        <center class=" ">
+            <h1>BankerMax<sup><img src="logo.png" style="width:50px;border-radius: 50%;"></sup></h1>
+            <label style="padding: 10px;border-radius: 10px;font-weight: bold;" class="bg-info text-warning" id="balance">Error</label>
+            <div class="round bg-info text-warning">
+                <h5>Make a Transaction</h5>
+                <form id="transForm">
+                    <input class="form-control" id="recipI" type="text" placeholder="Enter Recipient Username here..."><br>
+                    <input class="form-control" type="number" placeholder="Enter Recipient Id here..."><br>
+                    $<input class="form-control" id="numI" type="number" placeholder="Enter Amount here..."><br>
+                    <button class="btn btn-warning text-primary">
+                        <b>Send</b>
+                    </button>
+                </form>
+            </div>
+            <div class="round bg-info text-warning">
+                <h5>Add to Your wallet</h5>
+                <form id="depForm">
+                    $<input class="form-control" id="amI" type="number" placeholder="Enter Amount here..."><br>
+                    <button class="btn btn-warning text-primary">
+                        <b>Add</b>
+                    </button>
+                </form>
+            </div>
+        </center>
+    </body>
+    <script src="getAddFirebase.js"></script>
+    <script src="main.js"></script>
+</html>
